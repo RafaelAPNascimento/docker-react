@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t rafaelnasc1mento/front-end -f Dockerfile.dev
+
+script:
+  - docker run rafaelnasc1mento/front-end npm run test -- --coverage
