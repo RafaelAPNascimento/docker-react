@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t rafaelnasc1mento/front-end -f Dockerfile.dev
+  - docker build -t rafaelnasc1mento/docker-react -f Dockerfile.dev
 
 script:
-  - docker run rafaelnasc1mento/front-end npm run test -- --coverage
+  - docker run rafaelnasc1mento/docker-react npm run test -- --coverage
